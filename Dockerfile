@@ -10,12 +10,12 @@ ENV LANG=fr_FR.UTF-8
 
 ### Updating via our custom repository
 #RUN echo "deb http://ftp.fr.debian.org/debian/ jessie main contrib non-free" > /etc/apt/sources.list
-RUN echo "deb http://httpredir.debian.org/debian jessie main" /etc/apt/sources.list 
-RUN echo "deb http://httpredir.debian.org/debian jessie-updates main" /etc/apt/sources.list
-RUN echo "deb http://security.debian.org jessie/updates main" /etc/apt/sources.list
+#RUN echo "deb http://httpredir.debian.org/debian jessie main" /etc/apt/sources.list 
+#RUN echo "deb http://httpredir.debian.org/debian jessie-updates main" /etc/apt/sources.list
+#RUN echo "deb http://security.debian.org jessie/updates main" /etc/apt/sources.list
 
-RUN echo 'Acquire::http { Proxy "http://registry.iutbeziers.fr:3142"; };' >> /etc/apt/apt.conf.d/01proxy
-#RUN echo "deb http://debian.iutbeziers.fr/debian/ jessie main"  > /etc/apt/sources.list
+#RUN echo 'Acquire::http { Proxy "http://registry.iutbeziers.fr:3142"; };' >> /etc/apt/apt.conf.d/01proxy
+RUN echo "deb http://debian.iutbeziers.fr/debian/ jessie main"  > /etc/apt/sources.list
 #RUN echo "deb http://security.debian.org/ jessie/updates main" >> /etc/apt/sources.list
 #RUN echo "deb-src http://security.debian.org/ jessie/updates main"  >> /etc/apt/sources.list
 
