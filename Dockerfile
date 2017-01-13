@@ -15,7 +15,7 @@ ENV LANG=fr_FR.UTF-8
 #RUN echo "deb http://security.debian.org jessie/updates main" /etc/apt/sources.list
 
 #RUN echo 'Acquire::http { Proxy "http://registry.iutbeziers.fr:3142"; };' >> /etc/apt/apt.conf.d/01proxy
-RUN echo "deb http://debian.iutbeziers.fr/debian/ jessie main"  > /etc/apt/sources.list
+RUN echo "deb http://debian.iutbeziers.fr/debian/ jessie main contrib non-free"  > /etc/apt/sources.list
 #RUN echo "deb http://security.debian.org/ jessie/updates main" >> /etc/apt/sources.list
 #RUN echo "deb-src http://security.debian.org/ jessie/updates main"  >> /etc/apt/sources.list
 
@@ -45,7 +45,7 @@ ENV LANG=fr_FR.UTF-8
 ENV LANGUAGE=fr_FR:fr
 ENV LC_TIME=fr_FR.UTF-8
 ENV LC_COLLATE=fr_FR.UTF-8
-ENV http_proxy='http://10.255.255.254:3128/'
+#ENV http_proxy='http://10.255.255.254:3128/'
 
 
 RUN echo "Europe/Paris" > /etc/timezone && \
