@@ -2,7 +2,6 @@ FROM debian:jessie
 MAINTAINER jean-marc Pouchoulon
 
 # Let the container know that there is no tty
-# let test gitlab-ci
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV DEBCONF_NONINTERACTIVE_SEEN true
