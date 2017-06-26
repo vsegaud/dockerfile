@@ -5,3 +5,5 @@ build_image:
   script:
     - docker build -t registry.iutbeziers.fr/debianiut .
     - docker push  registry.iutbeziers.fr/debianiut 
+    - docker build -t registry.iutbeziers.fr/debian:stretch -f /Users/pouchou/logiciels/debianiut/Dockerfile.stretch .
+    - docker push registry.iutbeziers.fr/debian:stretch 
