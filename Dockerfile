@@ -37,6 +37,10 @@ RUN apt-get update && apt-get upgrade -y  && apt-get install -y \
  sudo \
  vim \
  nano \
+<<<<<<< HEAD
+=======
+ python \
+>>>>>>> f58753a159fc4e7956a68c6e34f2de10e0bb5e8f
  openssh-client \
  man
 
