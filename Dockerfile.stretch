@@ -1,7 +1,6 @@
 FROM debian:stretch
 MAINTAINER jean-marc Pouchoulon
 
-# Let the container know that there is no tty
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV DEBCONF_NONINTERACTIVE_SEEN true
