@@ -32,6 +32,7 @@ RUN apt-get update && apt-get upgrade -y  && apt-get install -y \
  apt-utils \
  debconf-utils \
  iproute2 \
+ isc-dhcp-client \
  net-tools \
  sudo \
  vim \
