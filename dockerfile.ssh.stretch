@@ -1,0 +1,20 @@
+FROM registry.iutbeziers.fr/debian:stretch
+
+RUN dpkg-divert --local --rename --add /sbin/initctl
+RUN ln -sf /bin/true /sbin/initctl
+
+RUN apt-get update && \
+    apt-get -y upgrade && \
+    apt-get -y install openssh-server
+
+# Setting openssh
+
+RUN mkdir -p /var/run/sshd && \ 
+  sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config 
+
+RUN echo "root:debian" | chpasswd
+
+# Updating shell to bash
+
+EXPOSE 22
+CMD ["/usr/sbin/sshd", "-D"]
