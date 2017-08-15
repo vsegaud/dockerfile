@@ -3,7 +3,9 @@ before_script:
 
 build_image:
   script:
-    - docker build -t registry.iutbeziers.fr/debianiut .
-    - docker push  registry.iutbeziers.fr/debianiut 
-    - docker build -t registry.iutbeziers.fr/debian:stretch -f /opt/dockerfiles/debianiut/Dockerfile.stretch .
-    - docker push registry.iutbeziers.fr/debian:stretch 
+    - docker build -t registry.iutbeziers.fr/debianiut:jessie .
+    - docker push  registry.iutbeziers.fr/debianiut:jessie 
+    - docker build -t registry.iutbeziers.fr/debianiut:stretch -f /opt/dockerfiles/debianiut/Dockerfile.stretch .
+    - docker push registry.iutbeziers.fr/debianiut:stretch 
+    - docker tag  registry.iutbeziers.fr/debianiut:stretch registry.iutbeziers.fr/debianiut:latest
+    - docker push registry.iutbeziers.fr/debianiut:latest
