@@ -7,5 +7,5 @@ build_image:
     - docker push  registry.iutbeziers.fr/debianiut:jessie 
     - docker build -t registry.iutbeziers.fr/debianiut:stretch -f /opt/dockerfiles/debianiut/Dockerfile.stretch .
     - docker push registry.iutbeziers.fr/debianiut:stretch 
-    - docker tag  registry.iutbeziers.fr/debianiut:stretch registry.iutbeziers.fr/debianiut:latest
+    - docker tag  registry.iutbeziers.fr/debianiut:latest registry.iutbeziers.fr/debianiut:stretch
     - docker push registry.iutbeziers.fr/debianiut:latest
